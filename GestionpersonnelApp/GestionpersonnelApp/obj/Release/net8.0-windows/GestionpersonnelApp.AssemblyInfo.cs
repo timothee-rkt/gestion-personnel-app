@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionpersonnelApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d018e187a4f78381f9126f68b06f67b005c05832")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+132b443529a707a5630309dfb11f26d1257e66d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionpersonnelApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionpersonnelApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
