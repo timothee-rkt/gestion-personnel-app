@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\timot\\source\\repos\\GestionpersonnelApp\\GestionpersonnelApp\\GestionpersonnelApp.csproj": {}
+    "C:\\Users\\timot\\source\\repos\\timothee-rkt\\gestion-personnel-app\\GestionpersonnelApp\\GestionpersonnelApp\\GestionpersonnelApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\timot\\source\\repos\\GestionpersonnelApp\\GestionpersonnelApp\\GestionpersonnelApp.csproj": {
+    "C:\\Users\\timot\\source\\repos\\timothee-rkt\\gestion-personnel-app\\GestionpersonnelApp\\GestionpersonnelApp\\GestionpersonnelApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timot\\source\\repos\\GestionpersonnelApp\\GestionpersonnelApp\\GestionpersonnelApp.csproj",
+        "projectUniqueName": "C:\\Users\\timot\\source\\repos\\timothee-rkt\\gestion-personnel-app\\GestionpersonnelApp\\GestionpersonnelApp\\GestionpersonnelApp.csproj",
         "projectName": "GestionpersonnelApp",
-        "projectPath": "C:\\Users\\timot\\source\\repos\\GestionpersonnelApp\\GestionpersonnelApp\\GestionpersonnelApp.csproj",
+        "projectPath": "C:\\Users\\timot\\source\\repos\\timothee-rkt\\gestion-personnel-app\\GestionpersonnelApp\\GestionpersonnelApp\\GestionpersonnelApp.csproj",
         "packagesPath": "C:\\Users\\timot\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timot\\source\\repos\\GestionpersonnelApp\\GestionpersonnelApp\\obj\\",
+        "outputPath": "C:\\Users\\timot\\source\\repos\\timothee-rkt\\gestion-personnel-app\\GestionpersonnelApp\\GestionpersonnelApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
