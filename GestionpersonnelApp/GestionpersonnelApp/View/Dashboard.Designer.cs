@@ -31,10 +31,10 @@
             label1 = new Label();
             label2 = new Label();
             panel1 = new Panel();
-            label3 = new Label();
-            button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
+            btnAbsence = new Button();
+            btnPersonnel = new Button();
+            label3 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,39 +61,12 @@
             // panel1
             // 
             panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnAbsence);
+            panel1.Controls.Add(btnPersonnel);
             panel1.Location = new Point(22, 105);
             panel1.Name = "panel1";
             panel1.Size = new Size(250, 308);
             panel1.TabIndex = 2;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(114, 70);
-            label3.Name = "label3";
-            label3.Size = new Size(46, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Menu";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(67, 57);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "Personnel ";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(67, 135);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 1;
-            button2.Text = "Absence ";
-            button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -103,6 +76,35 @@
             button3.TabIndex = 2;
             button3.Text = "Déconnexion ";
             button3.UseVisualStyleBackColor = true;
+            // 
+            // btnAbsence
+            // 
+            btnAbsence.Location = new Point(67, 135);
+            btnAbsence.Name = "btnAbsence";
+            btnAbsence.Size = new Size(94, 29);
+            btnAbsence.TabIndex = 1;
+            btnAbsence.Text = "Absence ";
+            btnAbsence.UseVisualStyleBackColor = true;
+            btnAbsence.Click += button2_Click;
+            // 
+            // btnPersonnel
+            // 
+            btnPersonnel.Location = new Point(67, 57);
+            btnPersonnel.Name = "btnPersonnel";
+            btnPersonnel.Size = new Size(94, 29);
+            btnPersonnel.TabIndex = 0;
+            btnPersonnel.Text = "Personnel ";
+            btnPersonnel.UseVisualStyleBackColor = true;
+            btnPersonnel.Click += button1_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(114, 70);
+            label3.Name = "label3";
+            label3.Size = new Size(46, 20);
+            label3.TabIndex = 3;
+            label3.Text = "Menu";
             // 
             // Dashboard
             // 
@@ -115,6 +117,7 @@
             Controls.Add(label1);
             Name = "Dashboard";
             Text = "Tableau de Bord ";
+            Load += Dashboard_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -126,8 +129,8 @@
         private Label label2;
         private Panel panel1;
         private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnAbsence;
+        private Button btnPersonnel;
         private Label label3;
     }
 }

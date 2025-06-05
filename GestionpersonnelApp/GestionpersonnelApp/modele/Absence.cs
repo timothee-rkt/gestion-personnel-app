@@ -10,13 +10,8 @@ namespace GestionpersonnelApp.modele
     /// <summary>
     /// Représente une absence d'un membre du personnel.
     /// </summary>
-    internal class Absence
+    public class Absence
     {
-        /// <summary>
-        /// Identifiant unique de l'absence.
-        /// </summary>
-        public int Id { get; set; }
-
         /// <summary>
         /// Identifiant du personnel concerné par l'absence.
         /// </summary>
@@ -25,17 +20,24 @@ namespace GestionpersonnelApp.modele
         /// <summary>
         /// Date de début de l'absence.
         /// </summary>
-        public DateTime DateDeDebut { get; set; }
+        public DateTime DateDebut { get; set; }
 
         /// <summary>
         /// Date de fin de l'absence.
         /// </summary>
-        public DateTime DateDeFin { get; set; }
+        public DateTime DateFin { get; set; }
 
         /// <summary>
         /// Identifiant du motif de l'absence.
         /// </summary>
         public int IdMotif { get; set; }
 
+        public Absence(int idPersonnel, DateTime dateDebut, DateTime dateFin, int idMotif)
+        {
+            IdPersonnel = idPersonnel;
+            DateDebut = dateDebut;
+            DateFin = dateFin;
+            IdMotif = idMotif;
+        }
     }
 }

@@ -60,6 +60,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 1;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -150,6 +151,7 @@
             button1.TabIndex = 12;
             button1.Text = "Valider";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -159,6 +161,7 @@
             button2.TabIndex = 13;
             button2.Text = "Annuler ";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // AbsenceForm
             // 

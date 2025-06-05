@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GestionpersonnelApp</name>
+    </assembly>
+    <members>
+        <member name="F:GestionpersonnelApp.bbdmanager.BddManager.instance">
+            <summary>
+            instance unique de la classe
+            </summary>
+        </member>
+        <member name="F:GestionpersonnelApp.bbdmanager.BddManager.connection">
+            <summary>
+            objet de connexion à la BDD à partir d'une chaîne de connexion
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.bbdmanager.BddManager.#ctor(System.String)">
+            <summary>
+            Constructeur pour créer la connexion à la BDD et l'ouvrir
+            </summary>
+            <param name="stringConnect">chaine de connexion</param>
+        </member>
+        <member name="M:GestionpersonnelApp.bbdmanager.BddManager.GetInstance(System.String)">
+            <summary>
+            Création d'une seule instance de la classe
+            </summary>
+            <param name="stringConnect">chaine de connexion</param>
+            <returns>instance unique de la classe</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.bbdmanager.BddManager.ReqControle(System.String)">
+            <summary>
+            Exécution d'une requête de type LCT (begin transaction, commit, rollback)
+            </summary>
+            <param name="stringQuery">requête</param>
+        </member>
+        <member name="M:GestionpersonnelApp.bbdmanager.BddManager.ReqUpdate(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Exécution d'une requête de type LMD (insert, update, delete)
+            </summary>
+            <param name="stringQuery">requête autre que select</param>
+            <param name="parameters">dictionnire contenant les parametres</param>
+        </member>
+        <member name="M:GestionpersonnelApp.bbdmanager.BddManager.ReqSelect(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Execution d'une requête de type LIT (select)
+            </summary>
+            <param name="stringQuery">requête select</param>
+            <param name="parameters">dictoinnaire contenant les parametres</param>
+            <returns>liste de tableaux d'objets contenant les valeurs des colonnes</returns>
+        </member>
+        <member name="T:GestionpersonnelApp.Controller.AbsenceController">
+            <summary>
+            Contrôleur pour la gestion des absences.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.Controller.AbsenceController.Ajouter(System.DateTime,System.DateTime,System.Int32,System.Int32,System.String@)">
+            <summary>
+            Ajoute une nouvelle absence.
+            </summary>
+            <param name="dateDebut">Date de début de l'absence.</param>
+            <param name="dateFin">Date de fin de l'absence.</param>
+            <param name="idMotif">Identifiant du motif de l'absence.</param>
+            <param name="idPersonnel">Identifiant du personnel concerné.</param>
+            <param name="message">Message de retour indiquant le succès ou l'échec de l'opération.</param>
+            <returns>True si l'ajout a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.Controller.AbsenceController.Modifier(GestionpersonnelApp.modele.Absence,System.DateTime,System.DateTime,System.Int32,System.Int32,System.String@)">
+            <summary>
+            Modifie une absence existante.
+            </summary>
+            <param name="ancienne">L'absence à modifier.</param>
+            <param name="dateDebut">Nouvelle date de début de l'absence.</param>
+            <param name="dateFin">Nouvelle date de fin de l'absence.</param>
+            <param name="idMotif">Nouveau motif de l'absence.</param>
+            <param name="idPersonnel">Identifiant du personnel concerné.</param>
+            <param name="message">Message de retour indiquant le succès ou l'échec de l'opération.</param>
+            <returns>True si la modification a réussi, sinon False.</returns>
+        </member>
+        <member name="T:GestionpersonnelApp.Controller.MotifController">
+            <summary>
+            Contrôleur pour la gestion des motifs d'absence.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.Controller.MotifController.ObtenirTous">
+            <summary>
+            Récupère la liste de tous les motifs d'absence.
+            </summary>
+            <returns>Liste des motifs.</returns>
+        </member>
+        <member name="T:GestionpersonnelApp.Controller.PersonnelController">
+            <summary>
+            Contrôleur pour la gestion des membres du personnel.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.Controller.PersonnelController.Ajouter(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String@)">
+            <summary>
+            Ajoute un membre du personnel.
+            </summary>
+            <param name="nom">Nom du personnel.</param>
+            <param name="prenom">Prénom du personnel.</param>
+            <param name="adresse">Adresse du personnel.</param>
+            <param name="telephone">Téléphone du personnel.</param>
+            <param name="email">Email du personnel.</param>
+            <param name="idService">Identifiant du service.</param>
+            <param name="message">Message de retour.</param>
+            <returns>True si l'ajout a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.Controller.PersonnelController.Modifier(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String@)">
+            <summary>
+            Modifie un membre du personnel.
+            </summary>
+            <param name="idPersonnel">Identifiant du personnel.</param>
+            <param name="nom">Nom du personnel.</param>
+            <param name="prenom">Prénom du personnel.</param>
+            <param name="adresse">Adresse du personnel.</param>
+            <param name="telephone">Téléphone du personnel.</param>
+            <param name="email">Email du personnel.</param>
+            <param name="idService">Identifiant du service.</param>
+            <param name="message">Message de retour.</param>
+            <returns>True si la modification a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.Controller.PersonnelController.Supprimer(System.Int32,System.String@)">
+            <summary>
+            Supprime un membre du personnel.
+            </summary>
+            <param name="idPersonnel">Identifiant du personnel à supprimer.</param>
+            <param name="message">Message de retour.</param>
+            <returns>True si la suppression a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.Controller.PersonnelController.ObtenirTous">
+            <summary>
+            Récupère la liste de tous les membres du personnel.
+            </summary>
+            <returns>Liste des membres du personnel.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.Controller.PersonnelController.ObtenirServices">
+            <summary>
+            Récupère la liste des services.
+            </summary>
+            <returns>Dictionnaire des services (id, nom).</returns>
+        </member>
+        <member name="T:GestionpersonnelApp.dal.ConnexionDAL">
+            <summary>
+            Fournit les méthodes d'accès aux données pour la gestion du personnel, des absences, des services et des motifs.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.GetConnectionString">
+            <summary>
+            Retourne la chaîne de connexion à la base de données.
+            </summary>
+            <returns>La chaîne de connexion MySQL.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.AuthentifierResponsable(System.String,System.String)">
+            <summary>
+            Authentifie un responsable à partir de son login et mot de passe.
+            </summary>
+            <param name="login">Le login du responsable.</param>
+            <param name="password">Le mot de passe du responsable.</param>
+            <returns>True si l'authentification réussit, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.AjouterPersonnel(GestionpersonnelApp.modele.Personnel)">
+            <summary>
+            Ajoute un membre du personnel à la base de données.
+            </summary>
+            <param name="p">L'objet Personnel à ajouter.</param>
+            <returns>True si l'ajout a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.ModifierPersonnel(GestionpersonnelApp.modele.Personnel)">
+            <summary>
+            Modifie les informations d'un membre du personnel.
+            </summary>
+            <param name="p">L'objet Personnel contenant les nouvelles informations.</param>
+            <returns>True si la modification a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.SupprimerPersonnel(System.Int32)">
+            <summary>
+            Supprime un membre du personnel de la base de données.
+            </summary>
+            <param name="idPersonnel">L'identifiant du personnel à supprimer.</param>
+            <returns>True si la suppression a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.GetAbsencesByPersonnel(System.Int32)">
+            <summary>
+            Récupère la liste des absences d'un membre du personnel.
+            </summary>
+            <param name="idPersonnel">L'identifiant du personnel.</param>
+            <returns>Une liste d'objets Absence.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.AjouterAbsence(GestionpersonnelApp.modele.Absence)">
+            <summary>
+            Ajoute une absence à la base de données.
+            </summary>
+            <param name="a">L'objet Absence à ajouter.</param>
+            <returns>True si l'ajout a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.ModifierAbsence(GestionpersonnelApp.modele.Absence,GestionpersonnelApp.modele.Absence)">
+            <summary>
+            Modifie une absence existante dans la base de données.
+            </summary>
+            <param name="ancienne">L'absence à modifier (ancienne valeur).</param>
+            <param name="nouvelle">L'objet Absence contenant les nouvelles valeurs.</param>
+            <returns>True si la modification a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.SupprimerAbsence(GestionpersonnelApp.modele.Absence)">
+            <summary>
+            Supprime une absence de la base de données.
+            </summary>
+            <param name="a">L'objet Absence à supprimer.</param>
+            <returns>True si la suppression a réussi, sinon False.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.GetServices">
+            <summary>
+            Récupère la liste des services.
+            </summary>
+            <returns>Un dictionnaire associant l'identifiant du service à son nom.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.GetAllPersonnels">
+            <summary>
+            Récupère la liste de tous les membres du personnel.
+            </summary>
+            <returns>Une liste d'objets Personnel.</returns>
+        </member>
+        <member name="M:GestionpersonnelApp.dal.ConnexionDAL.GetAllMotifs">
+            <summary>
+            Récupère la liste de tous les motifs.
+            </summary>
+            <returns>Une liste d'objets Motif.</returns>
+        </member>
+        <member name="T:GestionpersonnelApp.modele.Absence">
+            <summary>
+            Représente une absence d'un membre du personnel.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Absence.IdPersonnel">
+            <summary>
+            Identifiant du personnel concerné par l'absence.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Absence.DateDebut">
+            <summary>
+            Date de début de l'absence.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Absence.DateFin">
+            <summary>
+            Date de fin de l'absence.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Absence.IdMotif">
+            <summary>
+            Identifiant du motif de l'absence.
+            </summary>
+        </member>
+        <member name="T:GestionpersonnelApp.modele.Motif">
+            <summary>
+            Représente un motif.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Motif.Idmotif">
+            <summary>
+            Identifiant unique du motif.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Motif.Libelle">
+            <summary>
+            Libelle du motif.
+            </summary>
+        </member>
+        <member name="T:GestionpersonnelApp.modele.Personnel">
+            <summary>
+            Représente un membre du personnel.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Personnel.Nom">
+            <summary>Nom du personnel</summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Personnel.Prenom">
+            <summary>Prénom du personnel</summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Personnel.Adresse">
+            <summary>Adresse du personnel</summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Personnel.Telephone">
+            <summary>Téléphone du personnel</summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Personnel.Email">
+            <summary>Email du personnel</summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Personnel.IdService">
+            <summary>Service du personnel</summary>
+        </member>
+        <member name="M:GestionpersonnelApp.modele.Personnel.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>Service du personnel</summary>
+        </member>
+        <member name="T:GestionpersonnelApp.modele.Responsable">
+            <summary>
+            Représente un responsable.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Responsable.Id">
+            <summary>
+            Identifiant unique du responsable.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Responsable.Login">
+            <summary>
+            Identifiant de connexion du responsable.
+            /// </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Responsable.Pwd">
+            <summary>
+            Mot de passe du responsable.
+            </summary>
+        </member>
+        <member name="T:GestionpersonnelApp.modele.Service">
+            <summary>
+            Représente un service.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Service.IdService">
+            <summary>
+            Identifiant unique du service.
+            </summary>
+        </member>
+        <member name="P:GestionpersonnelApp.modele.Service.Nom">
+            <summary>
+            Nom du service.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:GestionpersonnelApp.Model.AbsenceForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.AbsenceForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.AbsenceForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:GestionpersonnelApp.Model.AbsenceList.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.AbsenceList.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.AbsenceList.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:GestionpersonnelApp.Model.Dashboard.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.Dashboard.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.Dashboard.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:GestionpersonnelApp.Model.LoginForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.LoginForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.LoginForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:GestionpersonnelApp.Model.PersonnelList.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.PersonnelList.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GestionpersonnelApp.Model.PersonnelList.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

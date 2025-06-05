@@ -16,7 +16,7 @@ namespace GestionpersonnelApp.modele
         /// <summary>
         /// Identifiant unique du service.
         /// </summary>
-        public int Id { get; set; }
+        public int IdService { get; set; }
 
         /// <summary>
         /// Nom du service.

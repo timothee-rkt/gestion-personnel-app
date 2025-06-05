@@ -2,7 +2,6 @@ C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelA
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\GestionpersonnelApp.deps.json
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\GestionpersonnelApp.runtimeconfig.json
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\GestionpersonnelApp.dll
-C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\GestionpersonnelApp.pdb
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\Google.Protobuf.dll
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
@@ -20,12 +19,9 @@ C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelA
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.csproj.AssemblyReference.cache
-C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.Form1.resources
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.Model.AbsenceForm.resources
-C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.Model.Form1.resources
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.Model.Dashboard.resources
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.Model.LoginForm.resources
-C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.Model.Personnel.resources
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.csproj.GenerateResource.cache
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.AssemblyInfoInputs.cache
@@ -35,6 +31,9 @@ C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelA
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\Gestionp.1FBCBA0F.Up2Date
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.dll
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\refint\GestionpersonnelApp.dll
-C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.pdb
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.genruntimeconfig.cache
 C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\ref\GestionpersonnelApp.dll
+C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.Model.PersonnelList.resources
+C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\bin\Debug\net8.0-windows\GestionpersonnelApp.xml
+C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.xml
+C:\Users\timot\source\repos\timothee-rkt\gestion-personnel-app\GestionpersonnelApp\GestionpersonnelApp\obj\Debug\net8.0-windows\GestionpersonnelApp.Model.AbsenceList.resources

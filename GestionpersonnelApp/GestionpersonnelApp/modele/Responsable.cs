@@ -9,7 +9,7 @@ namespace GestionpersonnelApp.modele
     /// <summary>
     /// Représente un responsable.
     /// </summary>
-    internal class Responsable
+    public class Responsable
     {
             /// <summary>
             /// Identifiant unique du responsable.
@@ -27,6 +27,13 @@ namespace GestionpersonnelApp.modele
             /// </summary>
             public string Pwd { get; set; }
 
+
+        public Responsable (string login, string pwd) 
+        {
+            Login = login;
+            Pwd = pwd;
+        
+        }
 
     }
 }

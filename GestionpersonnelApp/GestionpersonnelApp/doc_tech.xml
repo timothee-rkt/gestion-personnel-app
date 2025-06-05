@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<documentation>
+	<introduction>
+		<titre>GestionpersonnelApp</titre>
+		<description>
+			Application de gestion du personnel, des absences et des services pour une organisation.
+			Permet l’authentification des responsables, la gestion CRUD du personnel, des absences et des motifs, ainsi que la consultation des services.
+		</description>
+		<technos>
+			<techno>.NET 8</techno>
+			<techno>C# 12</techno>
+			<techno>WinForms</techno>
+			<techno>MySQL</techno>
+		</technos>
+	</introduction>
+
+	<architecture>
+		<layers>
+			<layer name="Modele">
+				<description>Contient les classes métiers : Personnel, Absence, Motif, Service.</description>
+			</layer>
+			<layer name="DAL (Data Access Layer)">
+				<description>Accès aux données MySQL via la classe ConnexionDAL.</description>
+			</layer>
+			<layer name="Controller">
+				<description>Logique métier et coordination entre la DAL et la vue (AbsenceController, PersonnelController, MotifController, Authcontroller).</description>
+			</layer>
+			<layer name="View">
+				<description>Interfaces utilisateur (WinForms) : formulaires de gestion du personnel, des absences, de connexion, etc.</description>
+			</layer>
+			<layer name="bbdmanager">
+				<description>Singleton de gestion de la connexion MySQL (BddManager).</description>
+			</layer>
+		</layers>
+	</architecture>
+
+	<classes>
+		<class name="Personnel">
+			<description>Représente un membre du personnel (Nom, Prénom, Adresse, Téléphone, Email, Service).</description>
+		</class>
+		<class name="Absence">
+			<description>Représente une absence d’un membre du personnel (DateDébut, DateFin, Motif, Personnel).</description>
+		</class>
+		<class name="Motif">
+			<description>Représente un motif d’absence (Id, Libellé).</description>
+		</class>
+		<class name="Service">
+			<description>Représente un service de l’organisation (Id, Nom).</description>
+		</class>
+		<class name="ConnexionDAL">
+			<description>Fournit toutes les méthodes d’accès aux données (CRUD pour personnel, absences, motifs, services, authentification).</description>
+		</class>
+		<class name="BddManager">
+			<description>Singleton pour la gestion de la connexion MySQL et l’exécution des requêtes SQL.</description>
+		</class>
+		<class name="AbsenceController, PersonnelController, MotifController, Authcontroller">
+			<description>Contrôleurs pour la logique métier et la gestion des entités.</description>
+		</class>
+		<class name="Formulaires (View)">
+			<description>Interfaces graphiques pour la gestion du personnel, des absences, de la connexion, etc.</description>
+		</class>
+	</classes>
+
+	<fonctionnalites>
+		<fonctionnalite>Authentification des responsables</fonctionnalite>
+		<fonctionnalite>Gestion CRUD du personnel</fonctionnalite>
+		<fonctionnalite>Gestion CRUD des absences</fonctionnalite>
+		<fonctionnalite>Gestion des motifs d’absence</fonctionnalite>
+		<fonctionnalite>Consultation des services</fonctionnalite>
+		<fonctionnalite>Interface utilisateur WinForms intuitive</fonctionnalite>
+	</fonctionnalites>
+
+	<bdd>
+		<description>
+			Base de données MySQL nommée <b>mediatek86</b> avec les tables principales :
+			<table>personnel</table>
+			<table>absence</table>
+			<table>motif</table>
+			<table>services</table>
+			<table>responsable</table>
+		</description>
+	</bdd>
+
+	<remarques>
+		<remarque>Le code est structuré en couches pour une meilleure maintenabilité.</remarque>
+		<remarque>Les accès aux données sont sécurisés par l’utilisation de requêtes paramétrées.</remarque>
+		<remarque>La documentation XML est présente dans chaque classe pour faciliter la maintenance.</remarque>
+	</remarques>
+</documentation>

@@ -20,7 +20,14 @@ namespace GestionpersonnelApp.modele
             /// Libelle du motif.
             /// </summary>
             public string Libelle { get; set; }
-        
+        public Motif() { }
+
+        public Motif(int idmotif, string libelle)
+        {
+            Idmotif = idmotif;
+            Libelle = libelle;
+        }
+
     }
 
 }

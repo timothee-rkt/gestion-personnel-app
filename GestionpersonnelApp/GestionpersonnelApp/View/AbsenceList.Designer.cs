@@ -1,6 +1,6 @@
 ﻿namespace GestionpersonnelApp.Model
 {
-    partial class Form1
+    partial class AbsenceList
     {
         /// <summary>
         /// Required designer variable.
@@ -58,6 +58,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 1;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // dataGridView1
             // 
@@ -112,6 +113,7 @@
             button1.TabIndex = 3;
             button1.Text = "Ajouter ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -121,6 +123,7 @@
             button2.TabIndex = 4;
             button2.Text = "Modifier ";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -132,7 +135,7 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // Form1
+            // AbsenceList
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -143,7 +146,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(comboBox1);
             Controls.Add(label1);
-            Name = "Form1";
+            Name = "AbsenceList";
             Text = "Liste des Absences";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

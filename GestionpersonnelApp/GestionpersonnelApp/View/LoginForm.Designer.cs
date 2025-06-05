@@ -69,6 +69,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 3;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label3
             // 
@@ -97,6 +98,7 @@
             button1.TabIndex = 6;
             button1.Text = "se connecter ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label4
             // 
@@ -123,7 +125,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "LoginForm";
-            Text = "Form1";
+            Text = "Application de Gestion";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
